@@ -64,6 +64,16 @@ int main() {
                 cout << "Saldo uang kas tidak cukup!" << endl;
             }
         }
+        else if (pilihan == 4) {
+            cout << "\n--- Riwayat Transaksi ---" << endl;
+            if (jumlahTransaksi == 0) {
+                cout << "Belum ada transaksi." << endl;
+                } else {
+                for (int i = 0; i < jumlahTransaksi; i++) {
+                    cout << i + 1 << ". [" << riwayatTipe[i] << "] Rp" << riwayatNominal[i] << " - " << riwayatKeterangan[i] << endl;
+                }
+            }
+        }            
         else if (pilihan == 5) {
             cout << "Terima kasih!" << endl;
         }
