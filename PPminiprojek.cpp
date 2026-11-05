@@ -15,6 +15,10 @@ int main() {
     int jumlahKas = 0;
     int uang;
     string nama;
+    string riwayatKeterangan[100];
+    int riwayatNominal[100];
+    string riwayattipe[100];
+    int jumlahtransaksi=0;
 
     cout << "Masukkan nama siswa: ";
     cin >> nama;
