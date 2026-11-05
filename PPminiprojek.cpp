@@ -6,7 +6,9 @@ void tampilkanMenu() {
     cout << "\n===== SISTEM UANG KAS KELAS =====" << endl;
     cout << "1. Tambah Uang Kas" << endl;
     cout << "2. Lihat Data Kas" << endl;
-    cout << "3. Keluar" << endl;
+    cout << "3. Catat Pengeluaran Kas" << endl; 
+    cout << "4. Lihat Riwayat Transaksi" << endl; 
+    cout << "5. Keluar" << endl; 
     cout << "Pilih menu: ";
 }
 
@@ -39,14 +41,14 @@ int main() {
             cout << "Nama siswa: " << nama << endl;
             cout << "Total uang kas: " << jumlahKas << endl;
         }
-        else if (pilihan == 3) {
+        else if (pilihan == 5) {
             cout << "Terima kasih!" << endl;
         }
         else {
             cout << "Pilihan tidak tersedia!" << endl;
         }
 
-    } while (pilihan != 3);
+    } while (pilihan != 5);
 
     return 0;
 }
