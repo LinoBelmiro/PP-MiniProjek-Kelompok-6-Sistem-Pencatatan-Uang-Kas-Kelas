@@ -7,7 +7,7 @@ void tampilkanMenu() {
     cout << "1. Tambah Uang Kas" << endl;
     cout << "2. Lihat Data Kas" << endl;
     cout << "3. Keluar" << endl;
-    cout << "Pilih menu: ";
+    cout << "Pilih menu: "; // test commit
 }
 
 int main() {
