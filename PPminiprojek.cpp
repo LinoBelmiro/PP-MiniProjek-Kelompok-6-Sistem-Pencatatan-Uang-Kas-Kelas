@@ -21,6 +21,8 @@ int main() {
     int riwayatNominal[100];
     string riwayattipe[100];
     int jumlahtransaksi=0;
+    int pengeluaran;
+    string keterangan;
 
     cout << "Masukkan nama siswa: ";
     cin >> nama;
@@ -44,6 +46,23 @@ int main() {
         else if (pilihan == 2) {
             cout << "Nama siswa: " << nama << endl;
             cout << "Total uang kas: " << jumlahKas << endl;
+        }  
+        else if (pilihan == 3) {
+            cout << "Masukkan jumlah pengeluaran: ";
+            cin >> pengeluaran;
+            if (jumlahKas >= pengeluaran) {
+                cout << "Masukkan keterangan pengeluaran: ";
+                cin.ignore();
+                getline(cin, keterangan);
+                jumlahKas = jumlahKas - pengeluaran;
+                riwayatKeterangan[jumlahTransaksi] = keterangan;
+                riwayatNominal[jumlahTransaksi] = pengeluaran;
+                riwayatTipe[jumlahTransaksi] = "-";
+                jumlahTransaksi++;
+                cout << "Pengeluaran berhasil dicatat!" << endl;
+            } else {
+                cout << "Saldo uang kas tidak cukup!" << endl;
+            }
         }
         else if (pilihan == 5) {
             cout << "Terima kasih!" << endl;
