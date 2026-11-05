@@ -34,6 +34,10 @@ int main() {
             cin >> uang;
 
             jumlahKas = jumlahKas + uang;
+            riwayatKeterangan[jumlahTransaksi] = "Pemasukan dari " + nama; 
+            riwayatNominal[jumlahTransaksi] = uang;
+            riwayatTipe[jumlahTransaksi] = "+"; 
+            jumlahTransaksi++; 
 
             cout << "Uang kas berhasil ditambahkan!" << endl;
         }
