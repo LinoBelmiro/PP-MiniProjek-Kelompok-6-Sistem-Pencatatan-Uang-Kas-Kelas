@@ -19,10 +19,12 @@ int main() {
     string nama;
     string riwayatKeterangan[100];
     int riwayatNominal[100];
-    string riwayattipe[100];
-    int jumlahtransaksi=0;
+    string riwayatTipe[100];
+    int jumlahTransaksi=0;
     int pengeluaran;
     string keterangan;
+    string riwayatTanggal[100];
+    string tanggal;
 
     cout << "Masukkan nama siswa: ";
     cin >> nama;
@@ -34,11 +36,14 @@ int main() {
         if (pilihan == 1) {
             cout << "Masukkan jumlah uang kas: ";
             cin >> uang;
+            cout << "Masukkan tanggal (HH/BB/TTTT): ";
+            cin >> tanggal;
 
             jumlahKas = jumlahKas + uang;
             riwayatKeterangan[jumlahTransaksi] = "Pemasukan dari " + nama; 
             riwayatNominal[jumlahTransaksi] = uang;
-            riwayatTipe[jumlahTransaksi] = "+"; 
+            riwayatTipe[jumlahTransaksi] = "+";
+            riwayatTanggal[jumlahTransaksi] = tanggal;
             jumlahTransaksi++; 
 
             cout << "Uang kas berhasil ditambahkan!" << endl;
@@ -51,6 +56,8 @@ int main() {
             cout << "Masukkan jumlah pengeluaran: ";
             cin >> pengeluaran;
             if (jumlahKas >= pengeluaran) {
+                cout << "Masukkan tanggal (HH/BB/TTTT): ";
+                cin >> tanggal;
                 cout << "Masukkan keterangan pengeluaran: ";
                 cin.ignore();
                 getline(cin, keterangan);
@@ -58,6 +65,7 @@ int main() {
                 riwayatKeterangan[jumlahTransaksi] = keterangan;
                 riwayatNominal[jumlahTransaksi] = pengeluaran;
                 riwayatTipe[jumlahTransaksi] = "-";
+                riwayatTanggal[jumlahTransaksi] = tanggal;
                 jumlahTransaksi++;
                 cout << "Pengeluaran berhasil dicatat!" << endl;
             } else {
@@ -70,7 +78,7 @@ int main() {
                 cout << "Belum ada transaksi." << endl;
                 } else {
                 for (int i = 0; i < jumlahTransaksi; i++) {
-                    cout << i + 1 << ". [" << riwayatTipe[i] << "] Rp" << riwayatNominal[i] << " - " << riwayatKeterangan[i] << endl;
+                    cout << i + 1 << ". [" << riwayatTanggal[i] << "] [" << riwayatTipe[i] << "] Rp" << riwayatNominal[i] << " - " << riwayatKeterangan[i] << endl;
                 }
             }
         }            
